@@ -1,0 +1,31 @@
+<section id="riwayat" class="page">
+<h2>Daftar Tindakan SPPG</h2>
+<div class="sub">Daftar rekaman tindakan penghentian dan pembukaan operasional SPPG berdasarkan wilayah. Data diambil dari Google Spreadsheet.</div>
+<div class="card">
+<div class="toolbar" style="flex-wrap: wrap; gap: 10px;">
+  <button class="btn primary" id="btnLoadHistory" data-action="loadHistory" style="white-space: nowrap;">Muat Data Tersuspend</button>
+  
+  <div class="filters" style="display: none; flex: 1; min-width: 300px; gap: 10px; align-items: center; justify-content: flex-end;" id="historyFilters">
+    <input type="text" id="histSearch" placeholder="Cari ID atau Nama SPPG..." style="flex: 1; min-width: 150px;">
+    
+    <select id="histWilayah" style="padding: 6px 12px; border-radius: 4px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text);">
+      <option value="">Semua Wilayah</option>
+      <option value="Wilayah 1">Wilayah 1</option>
+      <option value="Wilayah 2">Wilayah 2</option>
+      <option value="Wilayah 3">Wilayah 3</option>
+    </select>
+    
+    <select id="histStatus" style="padding: 6px 12px; border-radius: 4px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text);">
+      <option value="">Semua Status</option>
+      <option value="Masih Suspend">Masih Berhenti Ops</option>
+      <option value="Sudah Operasional">Sudah Operasional</option>
+    </select>
+  </div>
+</div>
+
+<div id="histSummary" style="margin-top: 14px; font-weight: bold; font-size: 0.95em;"></div>
+<div id="histOut" style="margin-top:14px; max-height: 60vh; overflow: auto;">
+  <p class="hint">Klik tombol di atas untuk memuat daftar seluruh tindakan SPPG dari spreadsheet.</p>
+</div>
+</div>
+</section>

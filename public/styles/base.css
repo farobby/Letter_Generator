@@ -1,0 +1,22 @@
+:root {
+  --nav:#102b4e;
+  --nav2:#0a1c33;
+  --blue:#1f6feb;
+  --bg:#f3f6fa;
+  --line:#dfe5ec;
+  --text:#182235;
+  --muted:#6b7280;
+  --green:#177245;
+  --red:#a52e24;
+  --gold:#8a6500
+}
+
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0;
+  background:var(--bg);
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text)
+}

@@ -1,0 +1,39 @@
+@media(max-width:1150px) {
+  .side {
+  width:210px
+}
+.main {
+  margin-left:210px;
+  width:calc(100% - 210px)
+}
+.split {
+  grid-template-columns:1fr
+}
+.stats {
+  grid-template-columns:1fr 1fr
+}
+
+}
+@media(max-width:720px) {
+  .side {
+  display:none
+}
+.main {
+  margin:0;
+  width:100%
+}
+.content {
+  padding:12px
+}
+.stats {
+  grid-template-columns:1fr 1fr
+}
+.top {
+  padding:0 12px
+}
+.word-area {
+  padding:8px;
+  zoom:.55
+}
+
+}

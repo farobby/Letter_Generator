@@ -1,0 +1,77 @@
+<section id="surat" class="page">
+<h2>Buat Surat</h2>
+<div class="sub">Pratinjau surat mengikuti prototipe awal. Ekspor DOCX memerlukan integrasi generator Word.</div>
+<div class="split">
+<div>
+<div class="card">
+<div class="field">
+<label>Jenis Surat</label>
+<select id="jenis" data-action="syncJenis">
+<option value="teguran">Surat Teguran</option>
+<option value="suspend-kf">Pemberhentian Operasional Sementara (KF)</option>
+<option value="suspend-km">Pemberhentian Operasional Sementara (KM)</option>
+<option value="cabut" selected>Pencabutan Pemberhentian Operasional Sementara</option>
+<option value="eskalasi">Surat Eskalasi</option>
+</select>
+</div>
+<div id="suspendFields" style="display:none">
+<div class="two">
+<div class="field" style="display:none;">
+<label>Jenis Kejadian</label>
+<select id="kejadian">
+<option value="KF">Kejadian Fatal</option>
+<option value="KM">Kejadian Menonjol</option>
+</select>
+</div>
+<div class="field">
+<label>Kategori Sanksi</label>
+<select id="kategori" data-action="updDurasi">
+<option value="10">Ringan</option>
+<option value="20">Sedang</option>
+<option value="30">Berat</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label>Durasi</label>
+<input id="durasi" value="10 hari kalender" readonly>
+</div>
+</div>
+<div class="field">
+<label>ID SPPG</label>
+<textarea id="ids">QSZNOIZE
+DP7MZKFO
+FJ1AFSI0
+7KBUERHB</textarea>
+<div class="hint">Bisa 1 atau banyak ID. Satu ID per baris.</div>
+</div>
+<div class="two">
+<div class="field">
+<label>Tanggal Surat</label>
+<input id="tgl" type="date" value="2026-09-20">
+</div>
+<div class="field">
+<label>Nomor Naskah (opsional)</label>
+<input id="nomor" placeholder="Kosongkan jika nomor diisi saat TTE">
+</div>
+</div>
+<div id="cabutNote" class="notice">Pencabutan otomatis menarik nomor surat pemberhentian aktif masing-masing SPPG dan memasukkannya ke kolom lampiran.</div>
+<div id="val">
+</div>
+<div class="toolbar">
+<button class="btn primary" data-action="preview">Preview Word</button>
+<button class="btn success" data-action="downloadDocx">Generate Word (.docx)</button>
+<button class="btn secondary" data-action="saveDraft">Simpan Draft</button>
+</div>
+<div class="warn">Ekspor Word belum terhubung. Simpan draf masih berupa simulasi.</div>
+</div>
+<div class="card" style="margin-top:14px">
+<b>SPPG Terpilih</b>
+<div id="selected" style="margin-top:10px">
+</div>
+</div>
+</div>
+<div class="word-area" id="wordPreview" contenteditable="true" spellcheck="false" style="outline: none;">
+</div>
+</div>
+</section>

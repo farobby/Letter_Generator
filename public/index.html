@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Prototipe Sistem Administrasi Tindakan Operasional SPPG v2</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="side">
+            <div class="brand">
+                <img src="./assets/logo-bgn.png" alt="Logo Badan Gizi Nasional">
+                <div>
+                    <b>KEDEPUTIAN BIDANG PEMANTAUAN DAN PENGAWASAN</b>
+                    <small>Direktorat Wilayah I</small>
+                </div>
+            </div>
+            <div class="menu">
+                <button class="active" data-page="dashboard">Dashboard</button>
+                <button data-page="master">Master Data SPPG</button>
+                <button data-page="surat">Buat Surat</button>
+                <button data-page="riwayat">Daftar Tindakan</button>
+                <button data-page="template">Template Surat</button>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="top">
+                <div class="top-left">
+                    <button id="toggleSidebar" class="toggle-sidebar" title="Toggle Sidebar">☰</button>
+                    <strong>Sistem Administrasi Operasional SPPG</strong>
+                </div>
+                <div class="user">
+                    <b>Pemantauan dan Pengawasan</b>
+                    <br>Superadmin
+                </div>
+            </div>
+            <div class="content" id="pages">
+                <p id="loading">Memuat aplikasi…</p>
+
+
+
+
+
+            </div>
+        </main>
+    </div>
+    <script type="module" src="./src/app.js">
+    </script>
+</body>
+
+</html>
